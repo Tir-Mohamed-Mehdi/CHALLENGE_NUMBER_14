@@ -1,0 +1,376 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pink: #ff52bf;
+  --Very-Pale-Cyan: #ebfbff;
+  --Very-Dark-Cyan: #00252e;
+  --Grayish-Blue: #808d99;
+
+  --Font-size: 18px;
+
+  --font-Weight-600-H: 600;
+  --font-Weight-400: 400;
+  --font-Weight-700: 700;
+
+  --font-family-heading: "Poppins", sans-serif;
+  --font-family-body: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-family-body);
+}
+
+/* ------------------ */
+/*- GLOBAL COMPONENTS */
+/* ------------------ */
+
+.container {
+  max-width: 35rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-inline: auto;
+}
+
+/* ___________ */
+
+.main__heading {
+  color: var(--Very-Dark-Cyan);
+  font-family: var(--font-family-heading);
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: var(--font-Weight-600-H);
+  cursor: pointer;
+}
+
+.main__heading + P {
+  color: var(--Very-Dark-Cyan);
+  font-size: var(--Font-size);
+}
+
+/* ___________ */
+
+.button {
+  display: inline-block;
+  width: 70%;
+  background-color: var(--Pink);
+  color: white;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: var(--font-Weight-700);
+  transition: all 300ms;
+  box-shadow: 0 4px 5px rgb(0, 0, 0, 0.14);
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+/* ------------------ */
+
+/** this is the first section */
+
+.hero {
+  background-color: var(--Very-Pale-Cyan);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0rem -2rem;
+  background-image: url(/images/bg-hero-mobile.svg);
+}
+
+.hero nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.hero nav img {
+  width: clamp(10rem, 30%, 15rem);
+}
+
+.hero nav a {
+  text-decoration: none;
+  background-color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 20rem;
+  font-weight: var(--font-Weight-700);
+  box-shadow: 0 4px 5px rgb(0, 0, 0, 0.14);
+}
+
+.text {
+  margin-bottom: 6rem;
+}
+
+.text p {
+  margin-bottom: 4rem;
+}
+
+.hero .container > img {
+  width: 100%;
+}
+
+/** this is the second section */
+
+.boxes .container .card {
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px rgba(29, 29, 29, 0.1);
+  border-radius: 1rem;
+  padding: 5rem 3rem;
+}
+
+.boxes .container .card img {
+  max-width: clamp(20rem, 80%, 35rem);
+  margin-bottom: 5rem;
+}
+
+.boxes .container .card h2 {
+  font-size: 2.1rem;
+}
+
+.boxes .container .card p {
+  font-size: 1.6rem;
+  color: var(--Grayish-Blue);
+}
+
+/** this is the third section */
+
+.cta .container {
+  margin: 0 2rem;
+  box-shadow: 0 0 10px rgba(29, 29, 29, 0.1);
+  border-radius: 2rem;
+  margin-inline: auto;
+  background-color: white;
+  position: relative;
+  z-index: 9992;
+  top: 6.5rem;
+}
+
+.cta .container h2 {
+  font-size: 1.6rem;
+  font-weight: var(--font-Weight-600-H);
+}
+
+/** this is the footer */
+
+.footer {
+  position: relative;
+  z-index: -1;
+  padding-top: 7rem;
+  background-color: var(--Very-Dark-Cyan);
+  color: white;
+}
+
+.footer .container {
+  text-align: start;
+}
+
+.footer .container .contact {
+  margin-bottom: 5rem;
+}
+
+.footer img {
+  margin: 3rem 0;
+  max-width: 40%;
+  margin-left: -2rem;
+}
+
+.footer .container .contact ul li {
+  list-style: none;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1.9rem;
+  font-size: 1.4rem;
+  color: var(--Grayish-Blue);
+}
+
+.footer .container .contact ul li:nth-child(1)::before {
+  content: url(/images/icon-location.svg);
+  transform: scale(0.9);
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+}
+.footer .container .contact ul li:nth-child(2)::before {
+  content: url(/images/icon-phone.svg);
+  transform: scale(0.9);
+  position: absolute;
+  left: -2rem;
+  top: -0rem;
+}
+.footer .container .contact ul li:nth-child(3)::before {
+  content: url(/images/icon-email.svg);
+  transform: scale(0.9);
+  position: absolute;
+  left: -2rem;
+  top: 0rem;
+}
+
+.footer .container > ul li {
+  list-style: none;
+  margin-bottom: 1.7rem;
+  margin-left: -2rem;
+}
+
+.footer .container > ul div li a {
+  color: var(--Grayish-Blue);
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.footer .container .media {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer .container .media a {
+  width: 3rem;
+  text-decoration: none;
+  height: 3rem;
+  display: inline-block;
+  color: white;
+  border: 1px solid white;
+  padding: 0.2rem;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .container > p {
+  text-align: center;
+  color: var(--Grayish-Blue);
+}
+
+/*! ------------------ */
+/*! this is the desktop view */
+/*! ------------------ */
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 120rem;
+  }
+
+  /** this is the hero section */
+
+  .hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0rem -2rem;
+    background-image: url(/images/bg-hero-desktop.svg);
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+
+  .hero .container nav {
+    grid-column: 1 / span 2;
+  }
+
+  .hero .container .text {
+    align-self: center;
+    text-align: start;
+  }
+
+  .hero .container .text h1 {
+    margin-top: 6rem;
+    font-size: 4rem;
+    max-width: 20ch;
+  }
+
+  .hero .container .text .button {
+    text-align: center;
+    max-width: 40%;
+  }
+
+  /** this is the boxes section */
+
+  .boxes .container .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+  }
+
+  .boxes .container .card > div {
+    text-align: start;
+  }
+
+  .boxes .container .card > div p {
+    max-width: 50ch;
+  }
+
+  .boxes .container .card:not(:nth-child(2)) > div {
+    order: -1;
+  }
+
+  .boxes .container .card :not(:nth-child(2)) img {
+    order: 2;
+  }
+
+  /** this is th CTA section */
+
+  .cta .container {
+    max-width: clamp(20rem, 40%, 70rem);
+  }
+
+  .cta .container a {
+    max-width: 30%;
+  }
+
+  /** this is the footer section */
+
+  .footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: baseline;
+    gap: 4rem;
+  }
+
+  .footer img {
+    grid-column: 1 / span 3;
+    margin-bottom: 0;
+  }
+
+  .footer .container .contact ul li {
+    max-width: 40ch;
+    font-size: 1.8rem;
+  }
+
+  .footer .container > ul {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+  }
+
+  .footer .container > ul li {
+    margin-left: 0;
+  }
+
+  .footer .container > ul li a {
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+  }
+
+  .footer .container > p {
+    grid-column: 1 / span 3;
+    justify-self: end;
+    font-size: 1.8rem;
+  }
+}
